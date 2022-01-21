@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: dag-pvc
+  namespace: airflow
+spec:
+  storageClassName: hostpath
+  accessModes:
+    - ReadWriteMany
+    - ReadOnlyMany
+  resources:
+    requests:
+      storage: 1Gi
+  volumeName: dag-pv

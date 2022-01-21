@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: dag-pv
+  labels: # TODO: what are labels?
+    type: local
+spec:
+# TODO: what is RECLAIM POLICY?
+  storageClassName: hostpath
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteMany
+    - ReadOnlyMany
+  hostPath:
+    path: "/Users/jbla/src/flowbox-repos/k8s-data-stack-poc/airflow/pv-data"
