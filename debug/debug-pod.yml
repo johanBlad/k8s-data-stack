@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: debug-pod-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: debug-pod
+  template:
+    metadata:
+      labels:
+        app: debug-pod
+    spec:
+      containers:
+      - name: debug-pod
+        image: ubuntu:latest
+        command:
+          - "sleep"
+          - "604800"
+      #   volumeMounts:
+      #     - name: debug-mount
+      #       mountPath: /var/...
+      # volumes:
+      # - name: debug-mount
+      #   persistentVolumeClaim:
+      #     claimName: ...

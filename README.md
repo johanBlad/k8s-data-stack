@@ -15,8 +15,8 @@ POC to host data stack on Kubernetes
 
 ## Todo
 
-- [ ] Local Kubernetes cluster 
-- [ ] Airflow project and K8s deployment
+- [x] Local Kubernetes cluster 
+- [x] Airflow project and K8s deployment
 - [ ] Postgres source deployment and mock data
 - [ ] Postgres Data Warehouse 
 - [ ] Airbyte deployment 
