@@ -5,7 +5,7 @@ POC to host data stack on Kubernetes
 ## Components 
 - Kubernetes Cluster for development (KinD)
 - Kubernetes Cluster for production  (EKS on AWS)
-- Postgres Data Warehouse 
+- Postgres OLAP Data Warehouse 
 - Postgres OLTP Source 
 - External Vendor Source (Slack, Github, ?)
 - Airbyte 
@@ -22,6 +22,8 @@ POC to host data stack on Kubernetes
 - [ ] Airbyte deployment 
 - [ ] SuperSet deployment
 - [ ] EKS Kubernetes cluster and deployment 
+- [ ] Prometheus + Grafana
+- [ ] dbt service
 
 
 ## Requirements

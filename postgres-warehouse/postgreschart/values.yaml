@@ -1,0 +1,23 @@
+global:
+  imageRegistry: ""
+  imagePullSecrets: []
+  storageClass: ""
+
+postgresql: 
+  image:
+    registry: docker.io
+    repository: bitnami/postgresql
+    tag: 14.1.0
+    pullPolicy: IfNotPresent
+    pullSecrets: []
+    debug: false
+
+  postgresqlPostgresPassword: "admin"
+  postgresqlUsername: "theuser"
+  postgresqlPassword: "thepassword"
+  postgresqlDatabase: "analytics"
+  extraEnv: []
+  postgresqlExtendedConf: {
+    max_connections: 42,
+    transaction_isolation: "repeatable read" 
+  }
